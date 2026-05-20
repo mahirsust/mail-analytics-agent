@@ -1,0 +1,45 @@
+name: mail-analytics-agent
+
+metadata:
+  template: mail-analytics-agent@0.1.0
+
+services:
+  agent:
+    project: .
+    language: py
+    host: containerapp
+    docker:
+      path: Dockerfile
+      context: .
+
+  job_worker:
+    project: src/job_worker
+    language: py
+    host: containerapp
+    docker:
+      path: src/job_worker/Dockerfile
+      context: .
+
+  email_analytics_mcp:
+    project: src/mcp_servers/email_analytics_server
+    language: py
+    host: containerapp
+    docker:
+      path: src/mcp_servers/email_analytics_server/Dockerfile
+      context: .
+
+  index_sync:
+    project: src/index_sync
+    language: py
+    host: containerapp
+    docker:
+      path: src/index_sync/Dockerfile
+      context: .
+
+hooks:
+  preprovision:
+    shell: sh
+    run: echo "Provisioning mail-analytics-agent in Sweden Central..."
+  postprovision:
+    shell: sh
+    run: echo "Provision complete. Run 'azd deploy' to push containers."

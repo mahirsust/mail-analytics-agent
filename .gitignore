@@ -1,0 +1,56 @@
+# ─── Environment & secrets ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# ─── uv ───────────────────────────────────────────────────────────────────────
+.venv/
+.uv/
+
+# ─── Testing & coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Azure Developer CLI ──────────────────────────────────────────────────────
+.azure/
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+*.tar
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Notebooks (keep .ipynb but ignore checkpoints) ──────────────────────────
+.ipynb_checkpoints/
+
+# ─── Readme ──────────────────────────
+mail-analytics-agent-plan.md
+Claude.md
