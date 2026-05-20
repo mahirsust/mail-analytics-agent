@@ -2,11 +2,28 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "environmentName": {
-      "value": "${AZURE_ENV_NAME}"
-    },
-    "location": {
-      "value": "${AZURE_LOCATION}"
-    }
+    "environmentName":              { "value": "${AZURE_ENV_NAME}" },
+    "location":                     { "value": "${AZURE_LOCATION}" },
+
+    "managedIdentityName":          { "value": "${AZURE_MANAGED_IDENTITY_NAME}" },
+    "containerRegistryServer":      { "value": "${AZURE_CONTAINER_REGISTRY_SERVER}" },
+    "imageTag":                     { "value": "${IMAGE_TAG}" },
+
+    "containerAppsEnvName":         { "value": "${AZURE_CONTAINER_APP_ENV}" },
+    "agentAppName":                 { "value": "${AZURE_CONTAINER_APP_AGENT}" },
+    "workerAppName":                { "value": "${AZURE_CONTAINER_APP_WORKER}" },
+    "analyticsMcpAppName":          { "value": "${AZURE_CONTAINER_APP_ANALYTICS_MCP}" },
+    "indexSyncJobName":             { "value": "${AZURE_CONTAINER_APP_JOB_INDEX_SYNC}" },
+
+    "keyVaultName":                 { "value": "${AZURE_KEYVAULT_NAME}" },
+    "aiServicesName":               { "value": "${AZURE_AI_SERVICES_NAME}" },
+    "gpt4oDeploymentName":          { "value": "${AZURE_OPENAI_DEPLOYMENT}" },
+    "searchName":                   { "value": "${AZURE_SEARCH_NAME}" },
+    "storageAccountName":           { "value": "${AZURE_STORAGE_ACCOUNT_NAME}" },
+    "storageQueueName":             { "value": "${AZURE_STORAGE_QUEUE_NAME}" },
+    "logAnalyticsName":             { "value": "${AZURE_LOG_ANALYTICS_NAME}" },
+    "appInsightsName":              { "value": "${AZURE_APP_INSIGHTS_NAME}" },
+
+    "indexSyncSchedule":            { "value": "${INDEX_SYNC_SCHEDULE}" }
   }
 }
